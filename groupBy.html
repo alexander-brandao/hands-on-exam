@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        
+        <script>
+
+    let consultants = [
+            	  { name: 'Peyton Turner', company: 'Walker Inc' },
+            	  { name: 'Isaias Fritsch', company: 'Walker Inc' },
+            	  { name: 'Susana Wilderman', company: 'Nolan Inc' }
+            	]
+
+
+    let groupByCompany = consultants.reduce((group, consultants)    => {
+                    let { company } = consultants;
+                    group[company] = group[company] ?? [];
+                    group[company].push(consultants);
+                    return group;
+        }, {});
+
+        console.log(groupByCompany);
+        </script>
+    
+    </head>
+    <body>
+        
+    </body>   
+</html>
